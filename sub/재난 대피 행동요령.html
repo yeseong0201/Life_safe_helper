@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="./item/로고.png" type="image/x-icon">
+    <title>생활 안전 도우미</title>
+    <style>
+        ul{
+            list-style-type: none;
+        }
+        a{
+           color:black;
+           text-decoration: none; 
+        }
+        html{
+            background-image: url(../item/BG.png);
+        }
+        body{
+            width:900px;
+            margin-left:auto;
+            margin-right:auto;
+            text-align:center;
+            word-break: keep-all;
+        }
+        #header{
+            background: rgb(218,211,240);
+            background: linear-gradient(90deg, rgba(218,211,240,1) 0%, rgba(247,169,165,1) 100%);
+            border:1px solid black;
+        }
+        #header img{
+            position:relative;
+            top:15px;
+            right:5px;
+        }
+        #menubar ul{
+            position:relative;
+            right:20px;
+        }
+        #menubar li{
+            display: inline;
+            margin-left: 20px;
+            margin-right: 20px;
+            transition: font-size 1s;
+        }
+        #menubar li:hover{
+            font-size:20px;
+        }
+        #jump{
+            background:rgb(219,157,211);
+            text-align: left;
+        }
+        #jump ul{
+            padding:5px 0px 10px 20px;
+            margin:0;
+        }
+        #jump li{
+            display: inline;
+            margin-right: 40px;
+        }
+        #jump h2{
+            display: inline;
+        }
+        
+        
+        #evac,#revac,#shel{
+            text-align: left;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        #evac_s,#revac_s,#shel_s{
+            border:8px solid rgb(247,169,165);
+            border-radius: 10px;
+            padding:15px 20px 20px 20px;
+        }
+        .tle{
+            position:relative;
+            left:10px;
+        }
+        #evac_s nav,#revac_s nav,#shel_s nav{
+            text-align: center;
+            font-size:13px;
+        }
+        #evac_s h3,#revac_s h3,#shel_s h3{
+            position:relative;
+            left:10px;
+        }
+        #evac_s ul,#revac_s ul,#shel_s ul{
+            padding-left:0px;
+        }
+        #evac_s li,#revac_s li,#shel_s li{
+            margin-top: 10px;
+        }
+        
+        #evac_s img{
+            margin-left: 40px;
+        }
+        #evac_s img:last-child{
+            margin-left: 120px;
+        }
+        #revac_s img{
+            margin-left: 50px;
+        }
+        #revac_s img:last-child{
+            margin-left:100px;
+        }
+        #shel_s>img{
+            margin-left: 100px;
+        }
+        #shel_imgs img{
+            margin-left: 50px;
+        }
+        #shel_imgs img:last-child{
+            margin-left:80px;
+        }
+        
+        #hh{
+            position:fixed;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            right:0;
+            bottom:0;
+        }
+    </style>
+    <script>
+        function evac_c(){
+            if(evac_s.style.display=="none"){
+                evac_s.style.display="";
+                e.innerHTML="▼대피";
+            }
+            else{
+                evac_s.style.display="none";
+                e.innerHTML="▶대피";
+            }
+        }
+        
+        function revac_c(){
+            if(revac_s.style.display=="none"){
+                revac_s.style.display="";
+                r.innerHTML="▼실내 대피";
+            }
+            else{
+                revac_s.style.display="none";
+                r.innerHTML="▶실내 대피";
+            }
+        }
+        
+        function shel_c(){
+            if(shel_s.style.display=="none"){
+                shel_s.style.display="";
+                s.innerHTML="▼재난 대피소";
+            }
+            else{
+                shel_s.style.display="none";
+                s.innerHTML="▶재난 대피소";
+            }
+        }
+        
+        function up(){
+            window.scrollTo(0,0);
+        }
+    </script>
+</head>
+<body>
+    <img id="hh" src="../item/button.png" width="70px" onclick="up()">
+    <div id="header">
+        <h1>
+            <span>
+                <a href="../메인 화면.html"><img src="../item/로고.png" width="50px" height="50px">생활 안전 도우미</a>
+            </span>
+        </h1>
+        <hr>
+        <div id="menubar">
+       <b>
+        <ul>
+            <li><a href="./생활 안전 수칙.html">생활 안전 수칙</a></li>
+            <li><a href="./위생 및 청결 유지.html">위생 및 청결 유지</a></li>
+            <li><a href="./재난 대피 행동요령.html">재난 대피 행동요령</a></li>
+            <li><a href="./주변 대피장소.html">주변 대피장소</a></li>
+            <li><a href="./학교 폭력 대처법.html">학교 폭력 대처법</a></li>
+        </ul>
+       </b>
+       </div>
+       <div id="jump">
+           <b>
+               <ul>
+                   <li><h2>재난 대피 행동요령</h2></li>
+                   <li><a href="#e">- 대피</a></li>
+                   <li><a href="#r">- 실내 대피</a></li>
+                   <li><a href="#s">- 재난 대피소</a></li>
+               </ul>
+           </b>
+       </div>
+    </div>
+    <br><br><br>
+    <div id="evac">
+        <h2 class="tle" id="e" onclick="evac_c()">▶대피</h2>
+        <div id="evac_s" style="display:none">
+            <b>
+                <nav>경우에 따라 집이나 인근 지역으로부터 대피할 필요성이 있습니다. 지자체 공무원들이 언론 매체나 직접적인 경고를 통해 대피할 시점을 알려줄 것입니다. 대피는 공공의 안전에 중대한 위협이 존재할 때 최후의 수단으로 사용됩니다.</nav>
+            </b>
+            
+            <h3>· 즉시 대피해야 하는 상황</h3>
+            <b>
+                <ul>
+                    <li>- 재난 요원에 의한 지시가 있을 때</li>
+                    <li>- 급박한 위험에 처했을 때</li>
+                </ul>
+            </b>
+            
+            <h3>· 대피를 위한 준비사항</h3>
+            <b>
+                <ul>
+                    <li>- 떠나기 전 집을 안전하게 단속하십시오. 창문과 문을 닫아 잠그고, 가전제품의 코드를 빼놓으십시오.</li>
+                    <li>- 튼튼한 신발, 그리고 긴 바지와 긴 소매 상의와 같이 편안하고 자신을 보호할 수 있는 옷을 입으십시오.</li>
+                    <li>- 자신의 비상용 백(GO BAG)을 대피 시 가져가십시오.</li>
+                    <li>- 자신의 직장과 학교, 그리고 자녀 학교의 대피 계획을 숙지하십시오.</li>
+                </ul>
+            </b>
+            
+            <img src="../재난 대피 행동 요령/evac_s1.png" width="240px">
+            <img src="../재난 대피 행동 요령/evac_s2.jpg" width="400px">
+        </div>
+    </div>
+    <br><br><br>
+    <div id="revac">
+        <h2 class="tle" id="r" onclick="revac_c()">▶실내 대피</h2>
+        <div id="revac_s" style="display:none">
+            <b>
+                <nav>대피소로 대피하는 것이 부적절하거나 불가능한 경우에는, 자신이 있는 장소에 그대로 머물러 있도록 지시될 수도 있습니다. 실내 대피는 대기 오염과 관련된 각종 비상사태에서 자신을 보호할 수 있는 효과적인 방법입니다. 그러나 반드시 재난 요원의 지시가 있을 경우에만 그렇게 해야합니다.</nav>
+            </b>
+            
+            <h3>· 실내 대피 지시를 받았을 때</h3>
+            <b>
+                <ul>
+                    <li>- 자신의 집이나 가장 가깝고 적절한 시설 (학교, 도서관, 종교 시설 등)의 내부로 둘어가십시오.</li>
+                    <li>- 문이나 창문이 적은 방을 대피소로 삼으십시오.</li>
+                    <li>- 모든 문과 창문을 잠그십시오.</li>
+                    <li>- 긴급 전화가 올 수 있도록 전화를 사용하지 마십시오.</li>
+                    <li>- 라디오나 텔레비전을 바상사태 정보에 맞추고 최신 정보를 입수하십시오.</li>
+                    <li>- 비상용 백(GO BAG)과 비상용 생필품 함을 활용하십시오.</li>
+                </ul>
+            </b>
+            
+            <img src="../재난 대피 행동 요령/r-evac_s1.png" width="300px" height="300px">
+            <img src="../재난 대피 행동 요령/r-evac_s2.jpg" width="300px">
+        </div>
+    </div>
+    <br><br><br>
+    <div id="shel">
+        <h2 class="tle" id="s"  onclick="shel_c()">▶재난 대피소</h2>
+        <div id="shel_s" style="display:none">
+            <b>
+                <nav>비상사태의 성격에 따라 집을 떠나 대피소로 이동할 필요가 있습니다. 각 지자체는 적절한 대피소를 마련해놓고 있습니다. 대피소로 대피할 필요가 있는 경우 지역 공무원이 통보해 드릴 것입니다.</nav>
+            </b>
+            <h3>· 재난 대피소 지침</h3>
+            <b>
+                <ul>
+                    <li>- 평상 시 지역 내 대피소를 파악해 두십시오.<br>(시군구청 재난 관리 부서에는 대피소 위치를 표시한 지도가 있습니다.)</li>
+                    <li>- 가능하면 의복과 침구류, 목욕 및 위생용품, 특수식품과 처방전 및 기타 의약품들을 소지하고 대피소로 오십시오.</li>
+                    <li>- 재난 대피소에 주류나 불법적인 물건은 반입할 수 없습니다.</li>
+                    <li>- 애완동물은 대피소에 데려갈 수 없습니다. 단, 봉사용 동물만 입장이 허가됩니다.</li>
+                </ul>
+            </b>
+            <img src="../재난 대피 행동 요령/shel_s1.jpg" width="600px">
+            <div id="shel_imgs">
+                <img src="../재난 대피 행동 요령/shel_s2.jpg" width="250px">
+                <img src="../재난 대피 행동 요령/shel_s3.jpg" width="350px">
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+</body>
+</html>

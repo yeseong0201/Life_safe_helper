@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="./item/로고.png" type="image/x-icon">
+    <title>생활 안전 도우미</title>
+    <style>
+        ul{
+            list-style-type: none;
+        }
+        a{
+           color:black;
+           text-decoration: none; 
+        }
+        html{
+            background-image: url(../item/BG.png);
+        }
+        body{
+            width:900px;
+            margin-left:auto;
+            margin-right:auto;
+            text-align:center;
+            word-break: keep-all;
+        }
+        #header{
+            background: rgb(218,211,240);
+            background: linear-gradient(90deg, rgba(218,211,240,1) 0%, rgba(247,169,165,1) 100%);
+            border:1px solid black;
+        }
+        #header img{
+            position:relative;
+            top:15px;
+            right:5px;
+        }
+        #menubar ul{
+            position:relative;
+            right:20px;
+        }
+        #menubar li{
+            display: inline;
+            margin-left: 20px;
+            margin-right: 20px;
+            transition: font-size 1s;
+        }
+        #menubar li:hover{
+            font-size:20px;
+        }
+        #jump{
+            background:rgb(255,174,25);
+            text-align: left;
+        }
+        #jump ul{
+            padding:5px 0px 10px 20px;
+            margin:0;
+        }
+        #jump li{
+            display: inline;
+            margin-right: 40px;
+        }
+        #jump h2{
+            display: inline;
+        }
+        
+        
+        #dust,#winter,#train{
+            text-align: left;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        #dust_h,#dust_g,#dust_s,#winter_s,#train_f,#train_e,#train_t{
+            border:8px solid rgb(247,169,165);
+            border-radius: 10px;
+        }
+        .tle{
+            position:relative;
+            left:10px;
+        }
+        #dust_h{
+            padding:20px 20px 40px 20px;
+        }
+        #dust_h img:first-child{
+            border:3px solid black;
+            float:left;
+            margin:0px 10px 0px 10px;
+        }
+        #dust_h ul{
+            font-size:15px;
+        }
+        #dust_g{
+            padding:10px 0px 60px 0px;
+        }
+        #dust_g img{
+            width:100px;
+            height:100px;
+            float:left;
+            position:relative;
+            right:20px;
+            margin-top:10px;
+            margin-bottom:10px;
+        }
+        #dust_g p{
+            position:relative;
+            top:15px;
+        }
+        #dust_g li{
+            clear:both;
+        }
+        #dust_s{
+            padding:10px 92px 10px 92px;
+        }
+        
+        
+        #winter_s ul{
+            position: relative;
+            right:20px;
+        }
+        #winter_s img{
+            border:5px solid rgb(48,165,233);
+            margin:3px 10px 3px 10px
+        }
+        #winter_imgs{
+            width:666px;
+            margin:20px auto 20px auto;
+        }
+        
+        
+        #train_f,#train_e,#train_t{
+            margin-bottom: 40px;
+        }
+        #opendoor{
+            border:5px solid rgb(247,169,165);
+            border-radius: 10px;
+            width:400px;
+            font-size:14px;
+            margin-left: 50px;
+            margin-bottom: 50px;
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+        #opendoor span{
+            text-align: center;
+            position: relative;
+            left:10px;
+            bottom:10px;
+        }
+        #opendoor img{
+            position:relative;
+            top:18px;
+        }
+        #train_f>img{
+            display: inline;
+            position:relative;
+            top:30px;
+            left:50px;
+        }
+        #train_e{
+            padding-bottom:260px;
+        }
+        #train_t{
+            padding-bottom:280px;
+        }
+        #train_e img,#train_t img{
+            float:right;
+            margin:20px 20px 20px 0px;
+        }
+        
+        #hh{
+            position:fixed;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            right:0;
+            bottom:0;
+        }
+    </style>
+    <script>
+        function dust_c(){
+            if(dust_h.style.display=="none"){
+                dust_h.style.display="";
+                dust_g.style.display="";
+                dust_s.style.display="";
+                d1.innerHTML="▼1.미세먼지";
+                d2.innerHTML="▼1-2.예보 등급";
+                d3.innerHTML="▼1-3.활동 요령";
+            }
+            else{
+                dust_h.style.display="none";
+                dust_g.style.display="none";
+                dust_s.style.display="none";
+                d1.innerHTML="▶1.미세먼지";
+                d2.innerHTML="▶1-2.예보 등급";
+                d3.innerHTML="▶1-3.활동 요령";
+            }
+        }
+        
+        function winter_c(){
+            if(winter_s.style.display=="none"){
+                winter_s.style.display="";
+                w.innerHTML="▼2.겨울철 안전 수칙";
+            }
+            else{
+                winter_s.style.display="none";
+                w.innerHTML="▶2.겨울철 안전 수칙";
+            }
+        }
+        
+        function train_c(){
+            if(train_f.style.display=="none"){
+                train_f.style.display="";
+                train_e.style.display="";
+                train_t.style.display="";
+                t.innerHTML="▼3.지하철 사고 발생 시";
+            }
+            else{
+                train_f.style.display="none";
+                train_e.style.display="none";
+                train_t.style.display="none";
+                t.innerHTML="▶3.지하철 사고 발생 시";
+            }
+        }
+        
+        function up(){
+            window.scrollTo(0,0);
+        }
+    </script>
+</head>
+<body>
+    <img id="hh" src="../item/button.png" width="70px" onclick="up()">
+    <div id="header">
+        <h1>
+            <span>
+                <a href="../메인 화면.html"><img src="../item/로고.png" width="50px" height="50px">생활 안전 도우미</a>
+            </span>
+        </h1>
+        <hr>
+        <div id="menubar">
+       <b>
+        <ul>
+            <li><a href="./생활 안전 수칙.html">생활 안전 수칙</a></li>
+            <li><a href="./위생 및 청결 유지.html">위생 및 청결 유지</a></li>
+            <li><a href="./재난 대피 행동요령.html">재난 대피 행동요령</a></li>
+            <li><a href="./주변 대피장소.html">주변 대피장소</a></li>
+            <li><a href="./학교 폭력 대처법.html">학교 폭력 대처법</a></li>
+        </ul>
+       </b>
+       </div>
+       <div id="jump">
+           <b>
+               <ul>
+                   <li><h2>생활 안전 수칙</h2></li>
+                   <li><a href="#d1">- 미세먼지</a></li>
+                   <li><a href="#w">- 겨울철 안전 수칙</a></li>
+                   <li><a href="#t">- 지하철 사고 발생 시</a></li>
+               </ul>
+           </b>
+       </div>
+    </div>
+    <br><br><br>
+    <div id="dust">
+       <h2 class="tle" id="d1" onclick="dust_c()">▶1.미세먼지</h2>
+        <div id="dust_h" style="display:none">
+           <img src="../생활안전수칙/dust.png" width="200px" height="200px">
+           <b>
+               <ul list-style-type="disc">
+                   <li>· 미세먼지들은 먼지 핵에 여러 종류의 오염 물질이 엉겨 붙어 구성된 것으로 호흡기를 통하여 인체 내로 유입될 수 있다.</li><br>
+                   <li>· 장기간 흡입 시, 입자가 미세할수록 코 점막을 통해 걸러지지 않고 흡입 시 허파 꽈리까지 직접 침투하기에 천식이나 폐 질환의 유병률, 조기 사망률 증가에 영향을 줄 수 있다.</li><br>
+                   <li>· 대부분의 연구에 따르면 장기적, 지속적 노출 시 건강 영향이 나타나며 단시간 흡입으로 갑자기 신체 변화가 나타나지는 않는다고 알려졌다. 그러나 어린이·노인·호흡기 질환자 등 민감군은 일반인보다 건강 영향이 클 수 있어 더 각별한 주의가 필요하다.</li><br>
+               </ul>
+           </b>
+            <img src="../생활안전수칙/dust_h1.jpg" width="375px" height="200px">
+            <img src="../생활안전수칙/dust_h2.png" width="440px" height="200px">
+        </div>
+        <h2 id="d2" class="tle" onclick="dust_c()">▶1-2.예보 등급</h2>
+        <div id="dust_g" style="display:none">
+           <b>
+              <ul>
+                  <li><img src="../생활안전수칙/dust_g1.jpg"><p>좋음:0~30㎛/㎥<br>위험군:대기오염관련 질환자군한테도 영향이 미치지 않는 수준</p></li>
+                  <li><img src="../생활안전수칙/dust_g2.jpg"><p>보통:31~80㎛/㎥<br>위험군:환자군에게 만성 노출 시 경미한 영향을 미칠 수 있는 수준</p></li>
+                  <li><img src="../생활안전수칙/dust_g3.jpg"><p>나쁨:81~150㎛/㎥<br>위험군:환자군 및 민감군에게 유해한 영향을 미칠 수 있는 수준,<br>일반인도 건강상 불쾌감을 경험할 수 있는 수준</p></li>
+                  <li><img src="../생활안전수칙/dust_g4.jpg"><p>매우 나쁨:151㎛/㎥ 이상<br>위험군:환자군 및 민감군에게 노출시 심각한 영향,<br>일반인도 영향을 받을 수 있는 수준</p></li>
+              </ul> 
+           </b>
+            
+        </div>
+        <h2 id="d3" class="tle" onclick="dust_c()">▶1-3.활동 요령</h2>
+        <div id="dust_s" style="display:none">
+            <img src="../생활안전수칙/dust_s.jpg">
+        </div>
+    </div>
+    <br><br><br>
+    <div id="winter">
+        <h2 id="w" class="tle" onclick="winter_c()">▶2.겨울철 안전 수칙</h2>
+        <div id="winter_s" style="display:none">
+            <b>
+                <ul>
+                    <li>- 가능한 외출을 자제한다.</li>
+                    <li>- 미끄러운 눈길을 걸을 때에는 주머니에 손을 넣지 말고 보온 장갑을 착용한다.</li>
+                    <li>- 걸어가는 중에는 휴대전화 통화를 삼가한다.</li>
+                    <li>- 집 앞, 건물 앞 도로의 눈을 치운다.</li>
+                    <li>- 염화칼슘, 모래 등을 뿌려 미끄럼 사고를 예방한다.</li>
+                    <li>- 운전자의 경우, 결빙된 구간에서는 서행한다.</li>
+                </ul>
+            </b>
+            <div id="winter_imgs">
+                <img src="../생활안전수칙/winter1.jpg" width="300px" height="300px">
+                <img src="../생활안전수칙/winter2.jpg" width="300px" height="300px">
+                <img src="../생활안전수칙/winter3.jpg" width="300px" height="300px">
+                <img src="../생활안전수칙/winter4.jpg" width="300px" height="300px">
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+    <div id="train">
+        <h2 id="t" class="tle" onclick="train_c()">▶3.지하철 사고 발생 시</h2>
+        <div id="train_f" style="display:none">
+            <h3 class="tle">3-1.지하철 화재 발생 시 대피요령</h3>
+            <b>
+               <ul>
+                   <li>- 노약자·장애인석 옆에 있는 비상 버튼을 눌러 승무원과 연락합니다.</li>
+                   <li>- 출입문이 자동으로 열리지 않으면 수동으로 문을 열고, 여의치 않으면 비상용 망치를 이용하여 유리창을 깨고, 망치가 없으면 소화기로 유리창을 깹니다.</li>
+                   <li>- 스크린도어(PSD)가 열리지 않을 경우에는 스크린도어에 설치된 빨간색 바를 밀고 나갑니다.</li>
+                   <li>- 코와 입을 수건, 티슈, 옷소매 등으로 막고 비상구로 신속히 대피합니다.</li>
+                   <li>- 정전 시에는 대피 유도등을 따라 출구로 나가고, 유도등이 보이지 않을 때에는 벽을 짚으면서 나가거나 시각장애인 안내용 보도블록을 따라 나갑니다.</li>
+                   <li>- 지상으로 대피가 여의치 않을 때는 전동차 진행 방향 터널로 대피합시다.</li>
+               </ul> 
+            </b>
+            <div id="opendoor">
+               <b>
+                  <span><img src="../item/로고.png" width="50px" height="50px">출입문을 수동으로 여는 방법?</span>
+                  <ol>
+                      <li>출입문 쪽 의자 아래 또는 벽면에 있는 조그만<br>뚜껑을 여세요.</li>
+                      <li>뚜껑 속의 비상 코크를 잡아당기거나,<br>빨간색 비상 핸들을 시계 방향으로 90도 돌린 후,<br>공기 빠지는 소리가 멈출 때까지 3~10초간 기다리세요.</li>
+                      <li>출입문을 양쪽으로 밀어서 여세요.</li>
+                  </ol> 
+               </b>
+            </div>
+            <img src="../생활안전수칙/train_f.png">
+        </div>
+        <div id="train_e" style="display:none">
+            <h3 class="tle">3-2.탈선, 충돌 사고 발생 시</h3>
+            <b>
+               <ul>
+                   <li>- 기관사 및 승무원의 안내 방송에 따라 대피합니다.</li>
+                   <li>- 승무원이 승강문을 개방하면 질서 있게 대피합니다.(필요 시, 비상 사다리 설치)</li>
+                   <li>- 부상자, 노약자, 임산부가 먼저 대피할 수 있도록 배려하고 도와줍니다.</li>
+                   <li>- 승강문이 열리지 않으면 비상용 망치를 이용하여 비상 창문을 깨고 탈출할 수 있습니다.</li>
+                   <li>- 반대선 선로에는 절대로 대피하지 않도록 하고, 선로변 내에 머무르지 않습니다.</li>
+                   <li>- 터널 내에서는 비상 유도등을 따라 가까운 터널 입구 및 비상 대피소로 이동합니다.</li>
+                   <li>- 안전한 장소에서 구급차, 구원 열차, 버스 등 연계수송 교통 수단을 기다립니다.</li>
+               </ul> 
+            </b>
+            <img src="../생활안전수칙/train_e.jpg" width="300px">
+        </div>
+        <div id="train_t" style="display:none">
+            <h3 class="tle">3-3.테러(독가스) 발생 시</h3>
+            <b>
+               <ul>
+                   <li>- 차량 출입문 옆에 있는 인터폰을 이용하여 승무원에게 연락합니다.</li>
+                   <li>- 코와 입을 수건, 티슈, 옷소매 등으로 막고 사고가 발생하지 않은 다른 객실로 이동합니다.</li>
+                   <li>- 기관사 및 승무원의 안내 방송에 따라 대피합니다.</li>
+                   <li>- 승무원이 승강문을 개방하면 질서 있게 대피합니다.(필요 시, 비상 사다리 설치)</li>
+                   <li>- 부상자, 노약자, 임산부가 먼저 대피할 수 있도록 배려하고 도와줍니다.</li>
+                   <li>- 승강문이 열리지 않으면 비상용 망치를 이용하여 비상 창문을 깨고 탈출할 수 있습니다.</li>
+                   <li>- 반대선 선로에는 절대로 대피하지 않도록 하고, 선로변 내에 머무르지 않습니다.</li>
+                   <li>- 터널 내에서는 비상 유도등을 따라 가까운 터널 입구 및 비상 대피소로 이동합니다.</li>
+                   <li>- 안전한 장소에서 구급차, 구원 열차, 버스 등 연계수송 교통 수단을 기다립니다.</li>
+               </ul> 
+            </b>
+            <img src="../생활안전수칙/train_t.jpg" width="350px">
+        </div>
+    </div>
+</body>
+</html>

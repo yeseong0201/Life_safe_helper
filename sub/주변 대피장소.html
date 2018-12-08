@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="./item/로고.png" type="image/x-icon">
+    <title>생활 안전 도우미</title>
+    <style>
+        ul{
+            list-style-type: none;
+        }
+        a{
+           color:black;
+           text-decoration: none; 
+        }
+        html{
+            background-image: url(../item/BG.png);
+        }
+        body{
+            width:900px;
+            margin-left:auto;
+            margin-right:auto;
+            text-align:center;
+            word-break: keep-all;
+        }
+        #header{
+            background: rgb(218,211,240);
+            background: linear-gradient(90deg, rgba(218,211,240,1) 0%, rgba(247,169,165,1) 100%);
+            border:1px solid black;
+        }
+        #header img{
+            position:relative;
+            top:15px;
+            right:5px;
+        }
+        #menubar ul{
+            position:relative;
+            right:20px;
+        }
+        #menubar li{
+            display: inline;
+            margin-left: 20px;
+            margin-right: 20px;
+            transition: font-size 1s;
+        }
+        #menubar li:hover{
+            font-size:20px;
+        }
+        #jump{
+            background:rgb(41,171,226);
+            text-align: left;
+        }
+        #jump ul{
+            padding:5px 0px 10px 20px;
+            margin:0;
+        }
+        #jump li{
+            display: inline;
+            margin-right: 40px;
+        }
+        #jump h2{
+            display: inline;
+        }
+        
+        
+        #map{
+            text-align: left;
+            width:700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .tle{
+            position:relative;
+            left:10px;
+        }
+        .shel{
+            text-align: left;
+            border:5px solid rgb(247,169,165);
+            margin-left: 60px;
+            margin-right: 60px;
+            padding-left: 20px;
+            padding-bottom: 40px;
+        }
+        .shel p{
+            font-size:18px;
+        }
+        .shel a{
+            float:right;
+            position:relative;
+            bottom:30px;
+            right:100px;
+        }
+        .shel h2{
+            display:inline;
+            position: relative;
+            bottom:10px;
+            left:2px;
+        }
+        
+        #hh{
+            position:fixed;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            right:0;
+            bottom:0;
+        }
+    </style>
+    <script>
+        function map_c(){
+            if(map_s.style.display=="none"){
+                map_s.style.display="";
+                m.innerHTML="▼대피 지도";
+            }
+            else{
+                map_s.style.display="none";
+                m.innerHTML="▶대피 지도";
+            }
+        }
+        
+        function up(){
+            window.scrollTo(0,0);
+        }
+    </script>
+</head>
+<body>
+    <img id="hh" src="../item/button.png" width="70px" onclick="up()">
+    <div id="header">
+        <h1>
+            <span>
+                <a href="../메인 화면.html"><img src="../item/로고.png" width="50px" height="50px">생활 안전 도우미</a>
+            </span>
+        </h1>
+        <hr>
+        <div id="menubar">
+       <b>
+        <ul>
+            <li><a href="./생활 안전 수칙.html">생활 안전 수칙</a></li>
+            <li><a href="./위생 및 청결 유지.html">위생 및 청결 유지</a></li>
+            <li><a href="./재난 대피 행동요령.html">재난 대피 행동요령</a></li>
+            <li><a href="./주변 대피장소.html">주변 대피장소</a></li>
+            <li><a href="./학교 폭력 대처법.html">학교 폭력 대처법</a></li>
+        </ul>
+       </b>
+       </div>
+       <div id="jump">
+           <b>
+               <ul>
+                   <li><h2>주변 대피장소</h2></li>
+                   <li><a href="#j1">- 대피소1</a></li>
+                   <li><a href="#j2">- 대피소2</a></li>
+                   <li><a href="#j3">- 대피소3</a></li>
+               </ul>
+           </b>
+       </div>
+    </div>
+    <br><br><br>
+    <div id="map">
+        <h2 class="tle" id="m" onclick="map_c()">▶대피 지도</h2>
+        <div id="map_s" style="display:none">
+            <img src="../주변 대피장소/대피소.png" width="700px"><br>
+            <strong class="tle">*지도상의 위치는 선린인터넷고등학교로 표기되어 있습니다.</strong>
+        </div>
+    </div>
+    <br><br><br>
+    <div class="shel">
+        <b>
+            <p id="j1">
+                대피소 1 : 숙대입구역 민방위대피시설(지하)<br>
+                위치 : 서울특별시 용산구 한강대로 지하 306(갈월동,숙대입구역)<br>
+                규모 : 6699㎡<br>
+                수용 인원 : 8120명
+            </p>
+        </b>
+        <a href="http://www.safekorea.go.kr/idsiSFK/neo/mapViewPopup3.jsp?addr=%25EC%2584%259C%25EC%259A%25B8%25ED%258A%25B9%25EB%25B3%2584%25EC%258B%259C%2520%25EC%259A%25A9%25EC%2582%25B0%25EA%25B5%25AC%2520%25ED%2595%259C%25EA%25B0%2595%25EB%258C%2580%25EB%25A1%259C%2520%25EC%25A7%2580%25ED%2595%2598%2520306&facilNm=%25EC%2588%2599%25EB%258C%2580%25EC%259E%2585%25EA%25B5%25AC%25EC%2597%25AD%2520%25EB%25AF%25BC%25EB%25B0%25A9%25EC%259C%2584%25EB%258C%2580%25ED%2594%25BC%25EC%258B%259C%25EC%2584%25A4&facilLode=126&facilLomi=58&facilLose=19&facilLade=37&facilLami=32&facilLase=43&jisgUnderse=%25EC%25A7%2580%25ED%2595%2598"><img src="../주변 대피장소/map.png" width="40px" height="40px"><h2>지도보기</h2></a>
+    </div>
+    <br><br><br>
+    <div class="shel">
+        <b>
+            <p id="j2">
+                대피소 2 : 청파동 주민센터 민방위대피시설<br>
+                위치 : 서울특별시 용산구 청파로 49길 6(청파동 2가, 청파동 주민센터)<br>
+                규모 : 4092㎡<br>
+                수용 인원 : 4960명
+            </p>
+        </b>
+        <a href="http://www.safekorea.go.kr/idsiSFK/neo/mapViewPopup3.jsp?addr=%25EC%2584%259C%25EC%259A%25B8%25ED%258A%25B9%25EB%25B3%2584%25EC%258B%259C%2520%25EC%259A%25A9%25EC%2582%25B0%25EA%25B5%25AC%2520%25EC%25B2%25AD%25ED%258C%258C%25EB%25A1%259C49%25EA%25B8%25B8%25206&facilNm=%25EC%25B2%25AD%25ED%258C%258C%25EB%258F%2599%25EC%25A3%25BC%25EB%25AF%25BC%25EC%2584%25BC%25ED%2584%25B0%2520%25EB%25AF%25BC%25EB%25B0%25A9%25EC%259C%2584%25EB%258C%2580%25ED%2594%25BC%25EC%258B%259C%25EC%2584%25A4&facilLode=126&facilLomi=58&facilLose=12&facilLade=37&facilLami=32&facilLase=44&jisgUnderse=%25EC%25A7%2580%25ED%2595%2598"><img src="../주변 대피장소/map.png" width="40px" height="40px"><h2>지도보기</h2></a>
+    </div>
+    <br><br><br>
+    <div class="shel">
+        <b>
+            <p id="j3">
+                대피소 3 : 숙명여대 민방위대피시설<br>
+                위치 : 서울특별시 용산구 한강대로 지하 306(갈월동,숙대입구역)<br>
+                규모 : 9738㎡<br>
+                수용 인원 : 11803명
+            </p>
+        </b>
+        <a href="http://www.safekorea.go.kr/idsiSFK/neo/mapViewPopup3.jsp?addr=%25EC%2584%259C%25EC%259A%25B8%25ED%258A%25B9%25EB%25B3%2584%25EC%258B%259C%2520%25EC%259A%25A9%25EC%2582%25B0%25EA%25B5%25AC%2520%25EC%25B2%25AD%25ED%258C%258C%25EB%25A1%259C47%25EA%25B8%25B8%2520100&facilNm=%25EC%2588%2599%25EB%25AA%2585%25EC%2597%25AC%25EB%258C%2580%2520%25EB%25AF%25BC%25EB%25B0%25A9%25EC%259C%2584%25EB%258C%2580%25ED%2594%25BC%25EC%258B%259C%25EC%2584%25A4&facilLode=126&facilLomi=57&facilLose=49&facilLade=37&facilLami=32&facilLase=45&jisgUnderse=%25EC%25A7%2580%25ED%2595%2598"><img src="../주변 대피장소/map.png" width="40px" height="40px"><h2>지도보기</h2></a>
+    </div>
+    <br><br><br>
+</body>
+</html>

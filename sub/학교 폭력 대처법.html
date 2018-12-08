@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="./item/로고.png" type="image/x-icon">
+    <title>생활 안전 도우미</title>
+    <style>
+        ul{
+            list-style-type: none;
+        }
+        a{
+           color:black;
+           text-decoration: none; 
+        }
+        html{
+            background-image: url(../item/BG.png);
+        }
+        body{
+            width:900px;
+            margin-left:auto;
+            margin-right:auto;
+            text-align:center;
+            word-break: keep-all;
+        }
+        #header{
+            background: rgb(218,211,240);
+            background: linear-gradient(90deg, rgba(218,211,240,1) 0%, rgba(247,169,165,1) 100%);
+            border:1px solid black;
+        }
+        #header img{
+            position:relative;
+            top:15px;
+            right:5px;
+        }
+        #menubar ul{
+            position:relative;
+            right:20px;
+        }
+        #menubar li{
+            display: inline;
+            margin-left: 20px;
+            margin-right: 20px;
+            transition: font-size 1s;
+        }
+        #menubar li:hover{
+            font-size:20px;
+        }
+        #jump{
+            background:rgb(252,238,33);
+            text-align: left;
+        }
+        #jump ul{
+            padding:5px 0px 10px 20px;
+            margin:0;
+        }
+        #jump li{
+            display: inline;
+            margin-right: 40px;
+        }
+        #jump h2{
+            display: inline;
+        }
+        
+        
+        #occur,#prev{
+            text-align: left;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        #occur_s,#prev_s{
+            border:8px solid rgb(247,169,165);
+            border-radius: 10px;
+            padding:15px 20px 20px 20px;
+        }
+        .tle{
+            position:relative;
+            left:10px;
+        }
+        
+        h3{
+            font-size:22px;
+        }
+        span{
+            font-size:20px;
+            margin-bottom: 0;
+        }
+        p{
+            font-size:14px;
+            margin-top: 0;
+        }
+        #occur_s ul{
+            padding-left: 0;
+            margin-top: 0;
+        }
+        #occur_s li{
+            font-size:14px;
+        }
+        #occur_imgs1{
+            margin-left: 50px;
+            margin-bottom: 80px;
+        }
+        #occur_imgs1 img:last-child{
+            margin-left: 100px;
+        }
+        #occur_imgs2{
+            margin-left: 100px;
+            margin-bottom: 80px;
+        }
+        #occur_imgs2 img:last-child{
+            margin-left: 100px;
+        }
+        #occur_imgs3{
+            margin-left: 40px;
+            margin-bottom: 80px;
+        }
+        #occur_imgs3 img:last-child{
+            margin-left: 50px;
+        }
+        #occur_imgs4{
+            margin-left: 30px;
+            margin-bottom: 80px;
+        }
+        #occur_imgs4 img:last-child{
+            margin-left: 130px;
+        }
+        #prev_s ul{
+            padding-left: 15px;
+        }
+        #prev_s li{
+            font-size:15px;
+            margin-bottom: 20px;
+        }
+        
+        #hh{
+            position:fixed;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            right:0;
+            bottom:0;
+        }
+    </style>
+    <script>
+        function occur_c(){
+            if(occur_s.style.display=="none"){
+                occur_s.style.display="";
+                o.innerHTML="▼학교폭력 발생 후 대응 방법";
+            }
+            else{
+                occur_s.style.display="none";
+                o.innerHTML="▶학교폭력 발생 후 대응 방법";
+            }
+        }
+        function prev_c(){
+            if(prev_s.style.display=="none"){
+                prev_s.style.display="";
+                p.innerHTML="▼학교 폭력 예방 및 대처하기";
+            }
+            else{
+                prev_s.style.display="none";
+                p.innerHTML="▶학교 폭력 예방 및 대처하기";
+            }
+        }
+        
+        function up(){
+            window.scrollTo(0,0);
+        }
+    </script>
+</head>
+<body>
+    <img id="hh" src="../item/button.png" width="70px" onclick="up()">
+    <div id="header">
+        <h1>
+            <span>
+                <a href="../메인 화면.html"><img src="../item/로고.png" width="50px" height="50px">생활 안전 도우미</a>
+            </span>
+        </h1>
+        <hr>
+        <div id="menubar">
+       <b>
+        <ul>
+            <li><a href="./생활 안전 수칙.html">생활 안전 수칙</a></li>
+            <li><a href="./위생 및 청결 유지.html">위생 및 청결 유지</a></li>
+            <li><a href="./재난 대피 행동요령.html">재난 대피 행동요령</a></li>
+            <li><a href="./주변 대피장소.html">주변 대피장소</a></li>
+            <li><a href="./학교 폭력 대처법.html">학교 폭력 대처법</a></li>
+        </ul>
+       </b>
+       </div>
+       <div id="jump">
+           <b>
+               <ul>
+                   <li><h2>학교 폭력 대처법</h2></li>
+                   <li><a href="#o">- 학교 폭력 발생 후 대응 방법</a></li>
+                   <li><a href="#p">- 학교 폭력 예방 및 대처하기</a></li>
+               </ul>
+           </b>
+       </div>
+    </div>
+    <br><br><br>
+    <div id="occur">
+        <h2 class="tle" id="o" onclick="occur_c()">▶학교폭력 발생 후 대응 방법</h2>
+        <div id="occur_s" style="display:none">
+            <b>
+            <h3>1. 신체폭행</h3>
+            <p>
+                신체적 폭행이 일어난 경우, 부모는 자녀의 힘든 마음을 들어주고, 상담교사에게 이야기 하고 도움을 구할 수 있도록 지지해 줄 필요가 있습니다.
+                그러나 자칫 피해자가 가해자의 친구들로부터 따돌림 등의 또 다른 폭력이나 지속적인 피해에 노출될 때에는 자녀가 담임교사나 상담교사로부터 상담을 받을 수 있도록 보다 적극적으로 도와주어야 합니다.
+                담임교사와 상담교사에게 전달할 경우, 학교폭력을 당한 자녀에게 먼저 교사에게 이 사실을 전해야 할 필요성이 있음을 이야기 한 후, 객관적인 사실에 대해서 교사에게 전달할 수 있도록 합니다.
+            </p>
+            <span>- 학교에 알릴 경우</span>
+            <p>
+                계속해서 보복성의 학교폭력이 이루어질 수 있으므로 주의해야 하며, 필요하다면 이를 위해 경호지원을 요청(117센터)할 수 있습니다.
+            </p>
+            <span>- 경찰에 신고할 경우</span>
+            <p>
+                경찰의 개입이 시작되면 학교에서의 중재는 불가능해지며, 가해자가 재범이 아니면 법적 처벌의 수위가 낮아 피해자가 기대하는 처벌을 받기도 어려운 경우가 많기 때문에, 신중하게 선택해야 합니다.
+                가해자가 만 14세 이상일 경우에는 형사법적 책임이 성립될 수 있습니다.
+            </p>
+            <div id="occur_imgs1">
+                <img src="../학교 폭력 대처법/occur_s1.png" width="300px">
+                <img src="../학교 폭력 대처법/occur_s2.jpg" width="250px">
+            </div>
+            
+            
+            <h3>2.금품갈취</h3>
+            <p>
+                금품갈취 문제가 발생한 경우, 정확한 피해사실(언제, 어디서, 어떤 물건을, 누가 등)을 확인해야 할 필요가 있습니다.
+                다른 신체적인 폭행 등의 피해가 없었는지 또한 확인해야 합니다.
+                확인 후에는 신체적 폭행과 마찬가지로 피해 자녀가 담임교사와 상담 교사에게 이야기하고 도움을 구할 수 있도록 부모는 적극적으로 지지해주어야 합니다.
+            </p>
+            <span>- 학교에 알릴 경우</span>
+            <p>
+                가해자가 모르는 사람이거나 지역의 선배일 경우 이에 대한 예방 차원에서 담임교사나 상담교사를 통해 학교 전체의 예방교육과 주변의 순찰 등이 진행되도록 요청할 수 있습니다.
+            </p>
+            <span>- 경찰에 신고할 경우</span>
+            <p>
+                금품갈취의 경우 액수에 상관없이 피해가 증명될 수 있으면 형사입건이 가능합니다.
+                그리고 재발방지를 원할 경우에는 담임교사나 상담교사를 통해 경찰의 주변 순찰 강화를 요청할 수 있습니다.
+            </p>
+            <div id="occur_imgs2">
+                <img src="../학교 폭력 대처법/occur_s3.jpg" width="225px">
+                <img src="../학교 폭력 대처법/occur_s4.jpg" width="300px">
+            </div>
+            
+            
+            <h3>3.집단따돌림, 괴롭힘</h3>
+            <p>
+                따돌림의 경우 초기대응이 중요합니다. 또한 학급 담임의 중재와 대처가 상당히 큰 역할을 차지할 수 있습니다.
+                따라서 초기에 담임교사나 상담교사가 조치할 수 있도록 학교폭력 피해 사실을 피해자가 직접 이야기 해 주어야 합니다.
+            </p>
+            <span>- 학교에 알릴 경우</span>
+            <p>
+                피해사실에 대한 증거자료가 확보되어야 하며, 형사 처벌을 받을 가능성이 있는 지를 확인해보아야 합니다.
+                원할 경우에는 담임교사나 상담교사를 통해 경찰의 주변 순찰 강화를 요청할 수 있습니다.
+            </p>
+            <span>- 경찰에 신고할 경우</span>
+            <p>
+                피해사실에 대한 증거자료가 확보되어야 하며, 형사 처벌을 받을 가능성이 있는지를 확인해보아야 합니다.
+                원할 경우에는 담임교사나 상담교사를 통해 경찰의 주변 순찰 강화를 요청할 수 있습니다.
+            </p><br>
+            <span>※ 증거자료 확보 (증거자료 만들기)</span>
+            <p>
+                집단따돌림과 괴롭힘의 경우 구체적이고 사실적인 증거확보가 어렵습니다.
+                이메일, 낙서메모지, 일기장 등이 증거자료가 될 수 있지만 이정도의 증거자료도 없는 경우에는 피해자가 직접 증거자료를 만들어야 합니다.
+                육하원칙에 의거하여 누가, 언제, 어디서, 어떤 폭력 상황이 발생했는지 구체적이고 사실적으로 정황을 묘사하고 그 당시 피해자의 심정까지 기록을 해서 자료를 만들어야 합니다.
+            </p>
+            <div id="occur_imgs3">
+                <img src="../학교 폭력 대처법/occur_s5.jpg" width="350px">
+                <img src="../학교 폭력 대처법/occur_s6.jpg" width="350px">
+            </div>
+            
+            
+            <h3>4.사이버 폭력</h3>
+            <p>
+                사이버 폭력의 경우, 우선 피해자 스스로 적극적으로 대처할 수 있도록 돕습니다.
+                가해자를 만나는 사이버상의 공간에서 피해자 스스로 거절하거나, ID 및 비밀번호를 변경하는 등의 방법과 함께, 가해자에게 경고, 공간폐쇄 등 적극적인 일차적 시도를 할 수 있습니다.
+                그래도 지속적으로 사이버폭력이 일어날 경우에는 만일 가해자를 아는 경우에는 교사 혹은 부모를 통해서 가해자와 가해자의 부모에게 연락하거나 학교에 중재요청을 할 수 있습니다.
+                그리고 가해자를 모르는 경우에는 사이버 수사대에 신고할 수 있습니다.
+            </p>
+            <span>가해자를 아는 경우</span>
+            <ul>
+                <li>- 구체적인 피해사실과 증거자료 제시</li>
+                <li>- 가해자의 사과, 재발 방지 각서</li>
+                <li>- 공간 삭제 및 공개 사과 요청 : 안티 카페, 게시판 등을 통한 공개적 폭력의 경우</li>
+                <li>- 위협, 협박 시 사이버 수사대에 도움 요청 : 구체적이고 사실적으로 정황을 묘사하고 그 당시 피해자의 심정까지 기록을 해서 자료를 만들어야 합니다.</li>
+            </ul>
+            <div id="occur_imgs4">
+                <img src="../학교 폭력 대처법/occur_s7.jpg" width="275px">
+                <img src="../학교 폭력 대처법/occur_s8.png" width="250px">
+            </div>
+            </b>
+        </div>
+    </div>
+    <br><br><br>
+    <div id="prev">
+        <h2 class="tle" id="p" onclick="prev_c()">▶학교폭력 예방 및 대처하기</h2>
+        <div id="prev_s" style="display:none">
+            <b>
+                <ul>
+                    <li>
+                        <span>절대 맞서 싸우지 않습니다.</span><br>
+                        - 당장 이길 수 있다고 할지라도 폭력은 더 큰 싸움을 불러 올 수 있습니다.
+                    </li>
+                    <li>
+                        <span>일단 그 자리를 피합니다.</span><br>
+                        - 폭력상황을 피한다고 해서 비겁하거나 자존심이 상하는 것은 아닙니다. 우선 그 상황을 피하는 것이 중요합니다.
+                        재빨리 경찰서나 큰 가게 등 안전한 곳으로 피한 후 보호자에게 연락합니다.
+                    </li>
+                    <li>
+                        <span>다른 사람에게 도움을 청합니다.</span><br>
+                        - 폭력 위험에 대해 혼자 고민하지 말고 교사, 부모, 경찰이나 상담기관 등에 알려서 도움을 받아야 합니다.
+                    </li>
+                    <li>
+                        <span>등하교 방법을 바꾸고 되도록 혼자 다니지 않습니다.</span><br>
+                        - 지속적인 괴롭힘이 있는 경우에는 등하교 방법을 바꾸고 친구나 부모 등과 동행합니다. 필요시에 [청소년폭력예방재단]에 경호(무료지원)를 요청할 수 있습니다.
+                    </li>
+                    <li>
+                        <span>폭력상황에 처한 친구를 그냥 지나치지 않습니다.</span><br>
+                        - 친구가 폭력상황에 처해있을 때는 주변 사람이나 관련 기관에 알려서 도움을 받을 수 있도록 합니다.
+                    </li>
+                </ul>
+            </b>
+            <img src="../학교 폭력 대처법/prev_s.gif">
+        </div>
+    </div>
+    <br><br><br>
+</body>
+</html>

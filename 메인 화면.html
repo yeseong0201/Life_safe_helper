@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="./item/로고.png" type="image/x-icon">
+    <title>생활 안전 도우미</title>
+    <style>
+        ul{
+            list-style-type: none;
+        }
+        a{
+           color:black;
+           text-decoration: none; 
+        }
+        html{
+            background-image: url(./item/BG.png);
+        }
+        body{
+            width:900px;
+            margin-left:auto;
+            margin-right:auto;
+            text-align:center;
+            word-break: keep-all;
+        }
+        #header{
+            background: rgb(218,211,240);
+            background: -moz-linear-gradient(left, #dad3f0 1%, #f7a9a5 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(left, #dad3f0 1%,#f7a9a5 100%);
+            background: linear-gradient(to right, #dad3f0 1%,#f7a9a5 100%);
+            padding-bottom: 10px;
+            border:1px solid black;
+        }
+        #header img{
+            position:relative;
+            top:15px;
+            right:5px;
+        }
+        #menubar ul{
+            position:relative;
+            right:20px;
+        }
+        #menubar li{
+            display: inline;
+            margin-left: 20px;
+            margin-right: 20px;
+            transition: font-size 1s;
+        }
+        #menubar li:hover{
+            font-size:20px;
+        }
+        
+        
+        #refer{
+            height:200px;
+            background-image: url("./item/item1.png");
+            background-repeat:no-repeat;
+            background-size:100% 100%;
+            margin: 20px 10px 20px 10px;
+            padding: 10px 10px 10px 10px;
+        }
+        #refer span{
+            position:relative;
+            top:10px;
+            font-weight:bold;
+            font-size:20px;
+        }
+        #refer ul{
+            position:relative;
+            bottom:10px;
+        }
+        #refer li{
+            display:inline;
+            margin-left:20px;
+            margin-right:20px;
+        }
+        #refer img{
+            width:50px;
+            height:50px;
+            position:relative;
+            top:20px;
+        }
+        
+        
+        #bgc{
+            background-color: rgb(218,211,240);
+            height:260px;
+        }
+        #menus{
+            width:840px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .menuhead{
+            background-color: white;
+        }
+        .menu{
+            width:250px;
+            height:150px;
+            float:left;
+            margin:50px 10px 50px 10px;
+            text-align: left;
+        }
+        .menuhead span{
+            font-size:24px;
+            position:relative;
+            left:10px;
+            bottom:30px;
+        }
+        .menuhead img{
+            position:relative;
+            left:110px;
+            width:60px;
+            height:60px;
+        }
+        .menu ul{
+            position: relative;
+            left:10px;
+        }
+        #menu1{
+            background-color:rgb(248,203,179);
+            border:5px solid rgb(190,230,223);
+        }
+        #menu2{
+            background-color:rgb(236,158,149);
+            border:5px solid rgb(169,222,141);
+        }
+        #menu3{
+            background-color:rgb(226,120,110);
+            border:5px solid rgb(220,197,145);
+        }
+        
+        
+        #blank{
+            background-color: rgb(233,155,145);
+            height:200px;
+        }
+        
+        
+        #footer{
+            background-color:rgb(203,216,203);
+            clear:both;
+            padding:10px 50px 10px 50px;
+            font-size:14px;
+        }
+        #footer #blue{
+            color:rgb(72,144,197);
+        }
+        #foot{
+            text-align: left;
+        }
+        #foot #sunrin{
+            float:right;
+            position:relative;
+            bottom:5px;
+        }
+        #foot #fig{
+            position:relative;
+            bottom:10px;
+        }
+        
+        #hh{
+            position:fixed;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            right:0;
+            bottom:0;
+        }
+    </style>
+    <script>
+        function up(){
+            window.scrollTo(0,0);
+        }
+    </script>
+</head>
+<body>
+    <img id="hh" src="./item/button.png" width="70px" onclick="up()">
+    <div id="header">
+        <h1>
+            <span>
+                <a href="메인 화면.html"><img src="./item/로고.png" width="50px" height="50px">생활 안전 도우미</a>
+            </span>
+        </h1>
+        <hr>
+        <div id="menubar">
+       <b>
+        <ul>
+            <li><a href="./sub/생활 안전 수칙.html">생활 안전 수칙</a></li>
+            <li><a href="./sub/위생 및 청결 유지.html">위생 및 청결 유지</a></li>
+            <li><a href="./sub/재난 대피 행동요령.html">재난 대피 행동요령</a></li>
+            <li><a href="./sub/주변 대피장소.html">주변 대피장소</a></li>
+            <li><a href="./sub/학교 폭력 대처법.html">학교 폭력 대처법</a></li>
+        </ul>
+       </b>
+       </div>
+    </div>
+    
+    <div id="refer">
+      <b>
+       <span>생활 안전 참고 사이트</span>
+        <ul>
+           <li><a href="http://www.mois.go.kr"><img src="./item/h_safe.png">행정안전부</a></li>
+           <li><a href="http://www.safemap.go.kr"><img src="./item/s_a_m.png">생활안전지도</a></li>
+           <li><a href="http://www.cyber1388.kr"><img src="./item/re_center.png">청소년 사이버 상담센터</a></li><br><br>
+           <li><a href="http://safecity.seoul.go.kr"><img src="./item/seoul.png">서울 안전누리</a></li>
+           <li><a href="http://www.nfa.go.kr"><img src="./item/sbs.png">소방청</a></li>
+           <li><a href="http://www.safetyreport.go.kr"><img src="./item/spaper.png">안전신문고</a></li>
+        </ul>
+        </b>
+    </div>
+    
+    <div id="bgc">
+        <div id="menus">
+            <div class="menu" id="menu1">
+               <b>
+                 <div class="menuhead">
+                     <span># 생활</span>
+                     <img src="./icon/lifestyle1.png">
+                 </div>
+                  <ul>
+                     <li><a href="./sub/생활 안전 수칙.html">- 생활 안전 수칙</a></li>
+                     <li><a href="./sub/위생 및 청결 유지.html">- 위생 및 청결 유지</a></li>
+                  </ul>
+               </b>
+            </div>
+              <div class="menu" id="menu2">
+                 <b>
+                   <div class="menuhead">
+                       <span># 재난</span>
+                       <img src="./icon/jaenan.png">
+                   </div>
+                    <ul>
+                       <li><a href="./sub/재난 대피 행동요령.html">- 재난 대피 행동요령</a></li>
+                       <li><a href="./sub/주변 대피장소.html">- 주변 대피장소</a></li>
+                    </ul>              
+                 </b>
+              </div>
+              <div class="menu" id="menu3">
+                 <b>
+                   <div class="menuhead">
+                       <span># 폭력</span>
+                       <img src="./icon/pokryuk.png">
+                   </div>
+                    <ul>
+                       <li><a href="./sub/학교 폭력 대처법.html">- 학교 폭력 대처법</a></li>
+                    </ul>
+                 </b> 
+              </div>
+        </div>
+    </div>
+    
+    <div id="blank">
+        
+    </div>
+    
+    <div id="footer">
+         본 사이트는 비영리 목적의 전국민 생활 안전 활성 목적으로 제작되었습니다.<br>
+         모든 자료는 <a href="http://www.safekorea.go.kr/idsiSFK/neo/main/main.html" id="blue">국민재난안전포털</a>에서 의거하였으며 상업적 목적으로 이용 시 법적으로 처벌받을 수 있습니다.
+         <hr>
+         <div id="foot">
+             기획자 : 강성혁<br>
+             개발자 : 이준호<br>
+             디자이너 : 이예성
+             <div id="sunrin">
+                 <a href="http://www.sunrint.hs.kr/index.do"><img src="./item/선린.png" width="30px" height="30px"><span id="fig">선린인터넷고등학교</span></a>
+             </div>
+         </div>
+    </div>
+    
+</body>
+</html>

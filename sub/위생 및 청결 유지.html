@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="./item/로고.png" type="image/x-icon">
+    <title>생활 안전 도우미</title>
+    <style>
+        ul{
+            list-style-type: none;
+        }
+        a{
+           color:black;
+           text-decoration: none; 
+        }
+        html{
+            background-image: url(../item/BG.png);
+        }
+        body{
+            width:900px;
+            margin-left:auto;
+            margin-right:auto;
+            text-align:center;
+            word-break: keep-all;
+        }
+        #header{
+            background: rgb(218,211,240);
+            background: linear-gradient(90deg, rgba(218,211,240,1) 0%, rgba(247,169,165,1) 100%);
+            border:1px solid black;
+        }
+        #header img{
+            position:relative;
+            top:15px;
+            right:5px;
+        }
+        #menubar ul{
+            position:relative;
+            right:20px;
+        }
+        #menubar li{
+            display: inline;
+            margin-left: 20px;
+            margin-right: 20px;
+            transition: font-size 1s;
+        }
+        #menubar li:hover{
+            font-size:20px;
+        }
+        #jump{
+            background:rgb(140,198,63);
+            text-align: left;
+        }
+        #jump ul{
+            padding:5px 0px 10px 20px;
+            margin:0;
+        }
+        #jump li{
+            display: inline;
+            margin-right: 40px;
+        }
+        #jump h2{
+            display: inline;
+        }
+        
+        
+        #tooth,#hand,#shower,#hair{
+            text-align: left;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        #tooth_s,#hand_s,#shower_s,#hair_s{
+            border:8px solid rgb(247,169,165);
+            border-radius: 10px;
+        }
+        .tle{
+            position:relative;
+            left:10px;
+        }
+        
+        
+        #tooth_s,#hand_s,#shower_s,#hair_s{
+            padding:20px 20px 20px 0px;
+        }
+        #tooth_imgs{
+            width:606px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #tooth_imgs img:last-child{
+            margin-left: 50px;
+        }
+        #hand_imgs{
+            width:656px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #hand_imgs img:last-child{
+            margin-left: 50px;
+        }
+        #shower_s{
+            padding-bottom: 200px;
+        }
+        #hair_s{
+            padding-bottom: 200px;
+        }
+        
+        #hh{
+            position:fixed;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            right:0;
+            bottom:0;
+        }
+    </style>
+    <script>
+        function tooth_c(){
+            if(tooth_s.style.display=="none"){
+                tooth_s.style.display="";
+                t.innerHTML="▼양치하기";
+            }
+            else{
+                tooth_s.style.display="none";
+                t.innerHTML="▶양치하기";
+            }
+        }
+        
+        function hand_c(){
+            if(hand_s.style.display=="none"){
+                hand_s.style.display="";
+                h.innerHTML="▼손 씻기";
+            }
+            else{
+                hand_s.style.display="none";
+                h.innerHTML="▶손 씻기";
+            }
+        }
+        
+        function shower_c(){
+            if(shower_s.style.display=="none"){
+                shower_s.style.display="";
+                s.innerHTML="▼자주 샤워하기";
+            }
+            else{
+                shower_s.style.display="none";
+                s.innerHTML="▶자주 샤워하기";
+            }
+        }
+        
+        function hair_c(){
+            if(hair_s.style.display=="none"){
+                hair_s.style.display="";
+                ha.innerHTML="▼샴푸로 머리 감기";
+            }
+            else{
+                hair_s.style.display="none";
+                ha.innerHTML="▶샴푸로 머리 감기";
+            }
+        }
+        
+        function up(){
+            window.scrollTo(0,0);
+        }
+    </script>
+</head>
+<body>
+    <img id="hh" src="../item/button.png" width="70px" onclick="up()">
+    <div id="header">
+        <h1>
+            <span>
+                <a href="../메인 화면.html"><img src="../item/로고.png" width="50px" height="50px">생활 안전 도우미</a>
+            </span>
+        </h1>
+        <hr>
+        <div id="menubar">
+       <b>
+        <ul>
+            <li><a href="./생활 안전 수칙.html">생활 안전 수칙</a></li>
+            <li><a href="./위생 및 청결 유지.html">위생 및 청결 유지</a></li>
+            <li><a href="./재난 대피 행동요령.html">재난 대피 행동요령</a></li>
+            <li><a href="./주변 대피장소.html">주변 대피장소</a></li>
+            <li><a href="./학교 폭력 대처법.html">학교 폭력 대처법</a></li>
+        </ul>
+       </b>
+       </div>
+       <div id="jump">
+           <b>
+               <ul>
+                   <li><h2>위생 및 청결 유지</h2></li>
+                   <li><a href="#t">- 양치하기</a></li>
+                   <li><a href="#h">- 손 씻기</a></li>
+                   <li><a href="#s">- 자주 샤워하기</a></li>
+                   <li><a href="#ha">- 샴푸로 머리 감기</a></li>
+               </ul>
+           </b>
+       </div>
+    </div>
+    <br><br><br>
+    <div id="tooth">
+        <h2 class="tle" id="t" onclick="tooth_c()">▶양치하기</h2>
+        <div id="tooth_s" style="display:none">
+            <b>
+                <ul>
+                    <li>⇒하루에 양치를 여러 번 해주어야 한다. 대부분의 치과 전문의는 아침 식사 후, 그리고 잠에 들기 전 하루 2번 양치할 것을 권장한다.</li>
+                    <li>⇒불소는 치아를 건강하게 하고 구강 건강을 촉진하기 때문에 불소가 들어간 치약을 사용하는 것이 좋다.</li>
+                    <li>⇒양치를 할 때 입 안의 다른 부분도 닦아준다. 혀와 입 천장, 볼 안쪽 부분을 닦아주지 않으면 해로운 박테리아가 남아 질병을 유발할 수 있다.</li>
+                    <li>⇒3개월에 한 번씩 칫솔을 교체해준다. 최적의 구강 위생을 유지하기 위해 가장 효과적인 방법이다.</li>
+                    <li>⇒검진을 위해 정기적으로 치과를 방문한다. 대부분의 치과 의사들은 1년에 2번 치과를 방문할 것을 권장하지만, 당신에게 가장 잘 맞는 스케줄대로 치과를 방문해보자.</li>
+                </ul>
+            </b>
+            <div id="tooth_imgs">
+                <img src="../위생 및 청결 유지/tooth_s1.png" width="200px" height="175px">
+                <img src="../위생 및 청결 유지/tooth_s2.jpg" width="350px" height="200px">
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+    <div id="hand">
+        <h2 class="tle" id="h" onclick="hand_c()">▶손 씻기</h2>
+        <div id=hand_s style="display:none">
+            <b>
+                <ul>
+                    <li>⇒개인 위생을 유지하기 위해 손을 자주 씻도록 한다. 일반적으로 화장실에 다녀온 후, 재채기한 후, 음식이나 음료를 준비하기 전, 식사하기 전, 많은 사람들이 만졌던 물건을 사용한 이후 손을 씻어준다.이렇게 하면 질병을 유발할 수 있는 세균과 박테리아의 전염을 방지할 수 있다.</li>
+                    <li>⇒손을 씻을 때 비누 거품을 내서 손 전체를 최소 20초 정도 닦아준 후 따뜻한 물로 씻어낸다. 손가락 사이와 손톱도 잘 문질러주면 거의 모든 세균 제거가 가능하다. 따뜻한 물로 비누를 모두 헹구어내고, 일회용 페이퍼 타올이나 에어 드라이어로 손을 말려준다.</li>
+                    <li>⇒더 꼼꼼하게 세균 전염을 예방하고자 한다면, 재채기를 할 때 팔꿈치 안쪽 부분을 사용해서 입을 가려보자. 이렇게하면 코와 입에서 나온 세균이 손에 묻지 않는다.</li>
+                </ul>
+            </b>
+            <div id="hand_imgs">
+                <img src="../위생 및 청결 유지/hand_s1.jpg" width="300px" height="200px">
+                <img src="../위생 및 청결 유지/hand_s2.jpg" width="300px" height="200px">
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+    <div id="shower">
+        <h2 class="tle" id="s" onclick="shower_c()">▶자주 샤워하기</h2>
+        <div id="shower_s" style="display:none">
+            <b>
+                <ul>
+                    <li>⇒깨끗함, 상쾌함, 그리고 좋은 냄새를 유지하고자 한다면 하루 혹은 2-3일에 한번씩 샤워나 목욕을 해보자. 박테리아나 세균이 몸에 쌓이는 것을 막을 수 있고, 원치 않는 냄새도 제거할 수 있는 가장 좋은 방법이다. 샤워를 할 때는 발, 귀의 뒷부분을 포함하여 온 몸을 닦아줄 수 있도록 한다.</li>
+                    <li>⇒피트니스 센터에 가거나, 대중 교통을 통해 출퇴근을 하거나, 매일 아픈 사람과 접촉해야 한다면 세균 전염을 예방하고 청결함을 유지하기 위해 매일 사워하는 것이 좋다.</li>
+                    <li>⇒배꼽도 빠뜨리지 않는다. 쉽게 잊을 수 있는 배꼽에서 여러 냄새를 유발하는 박테리아가 서식할 수 있다.</li>
+                    <li>⇒오랫 동안 몸의 냄새가 근심거리였다면 전문의에게 추천하는 항균 바디 워시가 있는지 물어보자.</li>
+                </ul>
+            </b>
+        </div>
+    </div>
+    <br><br><br>
+    <div id="hair">
+        <h2 class="tle" id="ha" onclick="hair_c()">▶샴푸로 머리 감기</h2>
+        <div id="hair_s" style="display:none">
+            <b>
+                <ul>
+                    <li>⇒일주일에 2-3번 머리를 감아준다. 대부분의 경우 머리를 매일 감아주면 오히려 해가 될 수 있다. 매일 머리를 감으면 머리의 천연 오일 성분이 씻겨나가 머리카락에 손상을 불러올 수 있기 때문이다. 그러나 머리에 기름기가 특히 많은 경우라면 매일 머리를 감아줄 필요가 있다.</li>
+                    <li>⇒일주일에 머리를 감아주는 회수는 사람에 따라 다를 수 있다. 자신의 머리 냄새가 어떤지 알아보고 머리에 얼마나 기름기가 지는지 주의깊게 살펴보자. 그리고 얼마나 자주 머리를 감는 것이 좋을지 판단한다.</li>
+                    <li>⇒운동을 하거나, 과하게 땀이 나는 신체 활동을 한다면 더 자주 머리를 감는 것이 좋다.</li>
+                </ul>
+            </b>
+        </div>
+    </div>
+    <br><br><br>
+</body>
+</html>
